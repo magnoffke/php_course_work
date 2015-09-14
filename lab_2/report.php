@@ -2,14 +2,17 @@
     <head>
         <title>Aliens Abducted Me - Report an Abduction</title>
     </head>
-
     <body>
         <h2>Aliens Abducted Me - Report an Abduction</h2>
         
         <?php
             $when_it_happened = $_POST['whenithappened'];
             $how_long = $_POST['howlong'];
+<<<<<<< HEAD
             $alien_description = $_POST['aliendescription'];
+=======
+            $alien_description = $_POST['description'];
+>>>>>>> 0ee8d0a04a2439da881a2234a77b0fe094cd23f2
             $fang_spotted = $_POST['fangspotted'];
             $email = $_POST['email'];
             
