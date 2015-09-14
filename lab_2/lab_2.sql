@@ -19,3 +19,5 @@ VALUES ('Sally', 'Jones', '3 days ago', '1 day', 'four', 'green with six tentacl
         'yes', 'I may have seen your dog. Contact me.', 'sally@gregs-list.net');
 
 SELECT * FROM aliens_abduction;
+
+SELECT * FROM aliens_abduction WHERE fang_spotted = 'yes';
