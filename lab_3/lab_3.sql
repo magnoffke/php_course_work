@@ -7,3 +7,5 @@ CREATE TABLE email_list
     last_name VARCHAR(20),
     email VARCHAR(60)
     );
+
+DELETE FROM email_list WHERE email = 'pr@honey-doit.com';
