@@ -6,10 +6,15 @@
   <title>Make Me Elvis - Remove Email</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+
 <body>
+  <img src="blankface.jpg" width="161" height="350" alt="" style="float:right" />
+  <img name="elvislogo" src="elvislogo.gif" width="229" height="32" border="0" alt="Make Me Elvis" />
+  <p>Please select the email addresses to delete from the email list and click Remove.</p>
+  <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
 <?php
-  $dbc = mysqli_connect('data.makemeelvis.com', 'elmer', 'theking', 'elvis_store')
+  $dbc = mysqli_connect('localhost', 'magnoffke', '', 'elvis_store')
     or die('Error connecting to MySQL server.');
 
   // Delete the customer rows (only if the form has been submitted)
