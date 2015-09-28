@@ -12,16 +12,20 @@
   $from = 'elmer@makemeelvis.com';
   $subject = $_POST['subject'];
   $text = $_POST['elvismail'];
+  $output_form = false;
 
 if ((!empty($subject)) && (!empty($text))) {
     echo 'You forgot the email subject and body text.<br />';
+    $output_form = true;
 }
 else {
         if (empty($subject) || empty($text)) {
             if (empty($subject)) {
-                echo 'You forgot the subject line.<br />';
+                echo 'You forgot the email subject line.<br />';
+                $output_form = true;
             } else {
                 echo 'You forgot the email body text. <br />';
+                $output_form = true;
             }
         } else {
     
@@ -43,6 +47,18 @@ else {
     
       mysqli_close($dbc);
       
+    }
+    
+    if ($output_form) {
+        ?>
+              <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                <label for="subject">Subject of email:</label><br />
+                <input id="subject" name="subject" type="text" size="30" /><br />
+                <label for="elvismail">Body of email:</label><br />
+                <textarea id="elvismail" name="elvismail" rows="8" cols="40"></textarea><br />
+                <input type="submit" name="Submit" value="Submit" />
+              </form>
+        <?php
     }
   
 }
