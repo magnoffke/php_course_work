@@ -27,9 +27,8 @@
             echo 'Enter an adjective: ' . $adjective . '<br />';
             echo 'Enter a verb: ' . $verb . '<br />';
             echo 'Enter an adverb: ' . $adverb . '<br /><br /><br />';
-            echo 'The aliens did this: ' . $what_they_did . '<br />';
             echo 'Your ' . $adjective . $noun .  'likes to '
-            echo $verb $adverb . '. Is that even possible?<br />'
+            $verb $adverb . '. Is that even possible?<br />'
         
         	mysqli_close($dbc);
             
