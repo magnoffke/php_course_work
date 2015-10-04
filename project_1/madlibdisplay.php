@@ -1,9 +1,9 @@
 <html>
     <head>
-        <title>Aliens Abducted Me - Report an Abduction</title>
+        <title>Madlib Display</title>
     </head>
     <body>
-        <h2>Aliens Abducted Me - Report an Abduction</h2>
+        <h2>It's Madlib Time!</h2>
         
         <?php
         
@@ -16,8 +16,8 @@
         	or die('Error connecting to MySQL server.');
         	
         
-        	$query = "INSERT INTO madlib_entries (id, noun, adjective, verb, adverb) " . 
-        		"VALUES ('noun', '$adjective', '$verb', '$adverb')";
+        	$query = "INSERT INTO madlib_entries (noun, adjective, verb, adverb) " . 
+        		"VALUES ('$noun', '$adjective', '$verb', '$adverb')";
         
         	$result = mysqli_query($dbc, $query)
         	 or die('Error querying database.');
@@ -27,8 +27,8 @@
             echo 'Enter an adjective: ' . $adjective . '<br />';
             echo 'Enter a verb: ' . $verb . '<br />';
             echo 'Enter an adverb: ' . $adverb . '<br /><br /><br />';
-            echo 'Your ' . $adjective . $noun .  'likes to '
-            $verb $adverb . '. Is that even possible?<br />'
+            echo 'Your ' . $adjective . ' ' .  $noun .  ' likes to ';
+            echo $verb . ' ' . $adverb . '. Is that even possible?<br />';
         
         	mysqli_close($dbc);
             
