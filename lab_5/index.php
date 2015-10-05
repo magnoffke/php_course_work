@@ -28,12 +28,11 @@
     echo '<strong>Name:</strong> ' . $row['name'] . '<br />';
     echo '<strong>Date:</strong> ' . $row['date'] . '</td></tr>';
     
-    if(is_file($row['screenshot']) && filesize($row['screenshot']) > 0) {
-        echo '<td><img src="' . $row['screenshot'] . '"alt="Score image" /></td></tr>';
+    if(is_file(GW_UPLOADPATH . $row['screenshot']) && filesize(GW_UPLOADPATH . $row['screenshot']) > 0) {
+      echo '<td><img src="' . GW_UPLOADPATH . $row['screenshot'] . '" alt="Score image" /></td></tr>';
     }
-    
     else {
-        echo '<td><img src="unverified.gif" alt="Unverified score" /></td></tr>';
+      echo '<td><img src="' . GW_UPLOADPATH . 'unverified.gif' . '" alt="Unverified score" /></td></tr>';
     }
   }
   echo '</table>';
