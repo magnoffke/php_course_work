@@ -1,0 +1,45 @@
+header, footer, nav, section, article, aside {
+        display: block;  
+}
+
+header, footer, nav, section, article, aside {
+        display: block;  
+}
+
+body {
+    background: #CDE1EB;
+    margin: 20px;
+}
+
+h1 {
+    font-variant: small-caps;
+    background-color: #80B2CC;
+    padding: 5px;
+    margin-bottom: -15px;
+    margin-top: 50px;
+}
+
+h2 {
+    margin-bottom: 20px; 
+    font-size: 1.25em;
+    font-family: arial, sans-serif;
+}
+
+p {
+    font-family: arial, sans-serif; 
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+label {
+    width: 225px;
+    display: block;
+    float: left;
+    font-family: arial, sans-serif;
+    font-size: .85em;
+}
+
+ul {
+    font-family: arial, sans-serif;
+    font-size: .85em;
+}
