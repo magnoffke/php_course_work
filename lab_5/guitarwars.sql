@@ -17,3 +17,5 @@ INSERT INTO `guitarwars` VALUES (6, '2008-04-23 14:09:50', 'Kenny Lavitz', 64930
 
 ALTER TABLE guitarwars 
 MODIFY COLUMN screenshot VARCHAR(64);
+
+SELECT * FROM guitarwars;
