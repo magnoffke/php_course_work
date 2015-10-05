@@ -13,3 +13,7 @@ INSERT INTO `guitarwars` VALUES (3, '2008-04-23 09:06:35', 'Eddie Vanilli', 3459
 INSERT INTO `guitarwars` VALUES (4, '2008-04-23 09:12:53', 'Belita Chevy', 282470);
 INSERT INTO `guitarwars` VALUES (5, '2008-04-23 09:13:34', 'Ashton Simpson', 368420);
 INSERT INTO `guitarwars` VALUES (6, '2008-04-23 14:09:50', 'Kenny Lavitz', 64930);
+
+
+ALTER TABLE guitarwars 
+MODIFY COLUMN screenshot VARCHAR(64);
