@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Madlib Display</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body>
         <h2>It's Madlib Time!</h2>
@@ -43,9 +44,9 @@
 
         
         <div>
-            <div>
-              <h3>Other Madlib Entries</h3>
-            </div>
+            <br /><hr />
+            <h3>Other Madlib Entries</h3>
+
         </div>
     
         <?php while ($record = mysqli_fetch_assoc($result)) { ?>
