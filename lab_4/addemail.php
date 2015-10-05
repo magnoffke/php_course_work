@@ -9,11 +9,7 @@
 <body>
 
 <?php
-<<<<<<< HEAD
   $dbc = mysqli_connect('data.makemeelvis.com', 'elmer', 'theking', 'elvis_store')
-=======
-  $dbc = mysqli_connect('localhost', 'magnoffke', '', 'elvis_store')
->>>>>>> 7442f9d215e9e596117dad602a0b550566f0a785
     or die('Error connecting to MySQL server.');
 
   $first_name = $_POST['firstname'];
