@@ -10,16 +10,15 @@
   <h2>Guitar Wars - Add Your High Score</h2>
 
 <?php
-
-    require_once('appvars.php');
-    require_once('connectvars.php');
+  require_once('appvars.php');
+  require_once('connectvars.php');
 
   if (isset($_POST['submit'])) {
     // Grab the score data from the POST
     $name = $_POST['name'];
     $score = $_POST['score'];
     $screenshot = $_FILES['screenshot']['name'];
-        $screenshot_type = $_FILES['screenshot']['type'];
+    $screenshot_type = $_FILES['screenshot']['type'];
     $screenshot_size = $_FILES['screenshot']['size']; 
 
     if (!empty($name) && !empty($score) && !empty($screenshot)) {
@@ -50,9 +49,14 @@
 
             mysqli_close($dbc);
           }
-    else {
-      echo '<p class="error">Please enter all of the information to add your high score.</p>';
-    }
+          else {
+            echo '<p class="error">Sorry, there was a problem uploading your screen shot image.</p>';
+          }
+        }
+      }
+      else {
+        echo '<p class="error">The screen shot must be a GIF, JPEG, or PNG image file no greater than ' . (GW_MAXFILESIZE / 1024) . ' KB in size.</p>';
+      }
 
       // Try to delete the temporary screen shot image file
       @unlink($_FILES['screenshot']['tmp_name']);
