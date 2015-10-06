@@ -17,7 +17,7 @@
     require_once('connectvars.php');
     
   // Connect to the database 
-  $dbc = mysqli_connect('DB_HOST', 'DB_USER', 'DB_PASSWORD', 'DB_NAME');
+  $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
   // Retrieve the score data from MySQL
   $query = "SELECT * FROM guitarwars ORDER BY score DESC, date ASC";
@@ -29,9 +29,9 @@
   while ($row = mysqli_fetch_array($data)) { 
     // Display the score data
     if ($i == 0) {
-        echo <tr><td colspan="2" class="topscoreheader">Top Score: ' . 
-        $row['score'] . '</td></tr>';'
+      echo '<tr><td colspan="2" class="topscoreheader">Top Score: ' . $row['score'] . '</td></tr>';
     }
+    
     echo '<tr><td class="scoreinfo">';
     echo '<span class="score">' . $row['score'] . '</span><br />';
     echo '<strong>Name:</strong> ' . $row['name'] . '<br />';
