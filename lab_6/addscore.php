@@ -14,6 +14,9 @@
   require_once('connectvars.php');
 
   if (isset($_POST['submit'])) {
+    // Connect to the database
+    $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+
     // Grab the score data from the POST
     $name = mysqli_real_escape_string($dbc, trim($_POST['name']));
     $score = mysqli_real_escape_string($dbc, trim($_POST['score']));
@@ -28,9 +31,6 @@
           // Move the file to the target upload folder
           $target = GW_UPLOADPATH . $screenshot;
           if (move_uploaded_file($_FILES['screenshot']['tmp_name'], $target)) {
-            // Connect to the database
-            $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
             // Write the data to the database
             $query = "INSERT INTO guitarwars (date, name, score, screenshot) VALUES (NOW(), '$name', '$score', '$screenshot')";
             mysqli_query($dbc, $query);
