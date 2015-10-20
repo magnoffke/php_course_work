@@ -26,12 +26,12 @@
   require_once('connectvars.php');
 
   // Make sure the user is logged in before going any further.
-  if (!isset($_COOKIE['user_id'])) {
+  if (!isset($_SESSION['user_id'])) {
     echo '<p class="login">Please <a href="login.php">log in</a> to access this page.</p>';
     exit();
   }
   else {
-    echo('<p class="login">You are logged in as ' . $_COOKIE['username'] . '. <a href="logout.php">Log out</a>.</p>');
+    echo('<p class="login">You are logged in as ' . $_SESSION['username'] . '. <a href="logout.php">Log out</a>.</p>');
   }
 
   // Connect to the database
@@ -89,11 +89,11 @@
         // Only set the picture column if there is a new picture
         if (!empty($new_picture)) {
           $query = "UPDATE mismatch_user SET first_name = '$first_name', last_name = '$last_name', gender = '$gender', " .
-            " birthdate = '$birthdate', city = '$city', state = '$state', picture = '$new_picture' WHERE user_id = '" . $_COOKIE['user_id'] . "'";
+            " birthdate = '$birthdate', city = '$city', state = '$state', picture = '$new_picture' WHERE user_id = '" . $_SESSION['user_id'] . "'";
         }
         else {
           $query = "UPDATE mismatch_user SET first_name = '$first_name', last_name = '$last_name', gender = '$gender', " .
-            " birthdate = '$birthdate', city = '$city', state = '$state' WHERE user_id = '" . $_COOKIE['user_id'] . "'";
+            " birthdate = '$birthdate', city = '$city', state = '$state' WHERE user_id = '" . $_SESSION['user_id'] . "'";
         }
         mysqli_query($dbc, $query);
 
@@ -110,7 +110,7 @@
   } // End of check for form submission
   else {
     // Grab the profile data from the database
-    $query = "SELECT first_name, last_name, gender, birthdate, city, state, picture FROM mismatch_user WHERE user_id = '" . $_COOKIE . "'";
+    $query = "SELECT first_name, last_name, gender, birthdate, city, state, picture FROM mismatch_user WHERE user_id = '" . $_SESSION['user_id'] . "'";
     $data = mysqli_query($dbc, $query);
     $row = mysqli_fetch_array($data);
 
@@ -161,4 +161,3 @@
   </form>
 </body> 
 </html>
-

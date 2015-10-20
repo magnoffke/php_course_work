@@ -8,7 +8,7 @@
   $error_msg = "";
 
   // If the user isn't logged in, try to log them in
-  if (!isset($_COOKIE['user_id'])) {
+  if (!isset($_SESSION['user_id'])) {
     if (isset($_POST['submit'])) {
       // Connect to the database
       $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -58,7 +58,7 @@
 
 <?php
   // If the session var is empty, show any error message and the log-in form; otherwise confirm the log-in
-  if (empty($_COOKIE['user_id'])) {
+  if (empty($_SESSION['user_id'])) {
     echo '<p class="error">' . $error_msg . '</p>';
 ?>
 
@@ -77,7 +77,7 @@
   }
   else {
     // Confirm the successful log-in
-    echo('<p class="login">You are logged in as ' . $_COOKIE['username'] . '.</p>');
+    echo('<p class="login">You are logged in as ' . $_SESSION['username'] . '.</p>');
   }
 ?>
 

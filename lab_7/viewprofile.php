@@ -26,12 +26,12 @@
   require_once('connectvars.php');
 
   // Make sure the user is logged in before going any further.
-  if (!isset($_COOKIE['user_id'])) {
+  if (!isset($_SESSION['user_id'])) {
     echo '<p class="login">Please <a href="login.php">log in</a> to access this page.</p>';
     exit();
   }
   else {
-    echo('<p class="login">You are logged in as ' . $_COOKIE['username'] . '. <a href="logout.php">Log out</a>.</p>');
+    echo('<p class="login">You are logged in as ' . $_SESSION['username'] . '. <a href="logout.php">Log out</a>.</p>');
   }
 
   // Connect to the database
@@ -39,7 +39,7 @@
 
   // Grab the profile data from the database
   if (!isset($_GET['user_id'])) {
-    $query = "SELECT username, first_name, last_name, gender, birthdate, city, state, picture FROM mismatch_user WHERE user_id = '" . $_COOKIE['user_id'] . "'";
+    $query = "SELECT username, first_name, last_name, gender, birthdate, city, state, picture FROM mismatch_user WHERE user_id = '" . $_SESSION['user_id'] . "'";
   }
   else {
     $query = "SELECT username, first_name, last_name, gender, birthdate, city, state, picture FROM mismatch_user WHERE user_id = '" . $_GET['user_id'] . "'";
@@ -73,7 +73,7 @@
       echo '</td></tr>';
     }
     if (!empty($row['birthdate'])) {
-      if (!isset($_GET['user_id']) || ($_COOKIE['user_id'] == $_GET['user_id'])) {
+      if (!isset($_GET['user_id']) || ($_SESSION['user_id'] == $_GET['user_id'])) {
         // Show the user their own birthdate
         echo '<tr><td class="label">Birthdate:</td><td>' . $row['birthdate'] . '</td></tr>';
       }
@@ -91,7 +91,7 @@
         '" alt="Profile Picture" /></td></tr>';
     }
     echo '</table>';
-    if (!isset($_GET['user_id']) || ($_COOKIE['user_id'] == $_GET['user_id'])) {
+    if (!isset($_GET['user_id']) || ($_SESSION['user_id'] == $_GET['user_id'])) {
       echo '<p>Would you like to <a href="editprofile.php">edit your profile</a>?</p>';
     }
   } // End of check for a single row of user results
