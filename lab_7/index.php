@@ -53,7 +53,7 @@
     else {
       echo '<tr><td><img src="' . MM_UPLOADPATH . 'nopic.jpg' . '" alt="' . $row['first_name'] . '" /></td>';
     }
-    if (isset($_SESSION['user_id'])) {
+    if (isset($_COOKIE['user_id'])) {
       echo '<td><a href="viewprofile.php?user_id=' . $row['user_id'] . '">' . $row['first_name'] . '</a></td></tr>';
     }
     else {
