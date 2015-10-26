@@ -12,67 +12,75 @@
   <h3>Risky Jobs - Search Results</h3>
 
 <?php
-    // Grab the sort setting and search keywords from the URL using GET
-    $sort = $_GET['sort'];
-    $query = "SELECT * FROM riskyjobs";
-    $user_search = $_GET['usersearch'];
-  
-    // Extract the search keywords into an array
-    $clean_search = str_replace(',', ' ', $user_search);
-    $search_words = explode(' ', $clean_search);
-    $final_search_words = array();
-    if (count($search_words) > 0) 
+
+    function build_query($user_search)
     {
-      foreach ($search_words as $word) 
-      {
-        if (!empty($word)) 
+        // Grab the sort setting and search keywords from the URL using GET
+        $sort = $_GET['sort'];
+        $query = "SELECT * FROM riskyjobs";
+        $user_search = $_GET['usersearch'];
+      
+        // Extract the search keywords into an array
+        $clean_search = str_replace(',', ' ', $user_search);
+        $search_words = explode(' ', $clean_search);
+        $final_search_words = array();
+        if (count($search_words) > 0) 
         {
-          $final_search_words[] = $word;
+          foreach ($search_words as $word) 
+          {
+            if (!empty($word)) 
+            {
+              $final_search_words[] = $word;
+            }
+          }
         }
-      }
+        
+        $where_list = array();
+        if (count($final_search_words) > 0)
+        {
+            foreach ($final_search_words as $word)
+            {
+                $where_list[] = "description LIKE '%$word%'";
+            }
+        }
+        $where_clause = implode(' OR ', $where_list);
+      
+        if (!empty($where_clause))
+        {
+          $query .= " WHERE $where_clause";
+        }
+        
+        return $query;
     }
     
-    $where_list = array();
-    if (count($final_search_words) > 0)
-    {
-        foreach ($final_search_words as $word)
-        {
-            $where_list[] = "description LIKE '%$word%'";
-        }
-    }
-    $where_clause = implode(' OR ', $where_list);
-  
-    if (!empty($where_clause))
-    {
-      $query .= " WHERE $where_clause";
-    }
-    
-  // Start generating the table of results
-  echo '<table border="0" cellpadding="2">';
-
-  // Generate the search result headings
-  echo '<tr class="heading">';
-  echo '<td>Job Title</td><td>Description</td><td>State</td><td>Date Posted</td>';
-  echo '</tr>';
-
-  // Connect to the database
-  require_once('connectvars.php');
-  $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
-  // Query to get the results
-  $result = mysqli_query($dbc, $query);
-  while ($row = mysqli_fetch_array($result)) 
-  {
-    echo '<tr class="results">';
-    echo '<td valign="top" width="20%">' . $row['title'] . '</td>';
-    echo '<td valign="top" width="50%">' . substr($row['description'], 0, 100) . '...</td>';
-    echo '<td valign="top" width="10%">' . $row['state'] . '</td>';
-    echo '<td valign="top" width="20%">' . substr($row['date_posted'], 0, 10) . '</td>';
+    $query = build_query($user_search);
+        
+    // Start generating the table of results
+    echo '<table border="0" cellpadding="2">';
+        
+    // Generate the search result headings
+    echo '<tr class="heading">';
+    echo '<td>Job Title</td><td>Description</td><td>State</td><td>Date Posted</td>';
     echo '</tr>';
-  } 
-  echo '</table>';
-
-  mysqli_close($dbc);
+    
+    // Connect to the database
+    require_once('connectvars.php');
+    $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    
+    // Query to get the results
+    $result = mysqli_query($dbc, $query);
+    while ($row = mysqli_fetch_array($result)) 
+    {
+        echo '<tr class="results">';
+        echo '<td valign="top" width="20%">' . $row['title'] . '</td>';
+        echo '<td valign="top" width="50%">' . substr($row['description'], 0, 100) . '...</td>';
+        echo '<td valign="top" width="10%">' . $row['state'] . '</td>';
+        echo '<td valign="top" width="20%">' . substr($row['date_posted'], 0, 10) . '</td>';
+        echo '</tr>';
+    } 
+    echo '</table>';
+    
+    mysqli_close($dbc);
 ?>
 
 </body>
