@@ -12,9 +12,41 @@
   <h3>Risky Jobs - Search Results</h3>
 
 <?php
-  // Grab the sort setting and search keywords from the URL using GET
-  $sort = $_GET['sort'];
-
+    // Grab the sort setting and search keywords from the URL using GET
+    $sort = $_GET['sort'];
+    $query = "SELECT * FROM riskyjobs";
+    $user_search = $_GET['usersearch'];
+  
+    // Extract the search keywords into an array
+    $clean_search = str_replace(',', ' ', $user_search);
+    $search_words = explode(' ', $clean_search);
+    $final_search_words = array();
+    if (count($search_words) > 0) 
+    {
+      foreach ($search_words as $word) 
+      {
+        if (!empty($word)) 
+        {
+          $final_search_words[] = $word;
+        }
+      }
+    }
+    
+    $where_list = array();
+    if (count($final_search_words) > 0)
+    {
+        foreach ($final_search_words as $word)
+        {
+            $where_list[] = "description LIKE '%$word%'";
+        }
+    }
+    $where_clause = implode(' OR ', $where_list);
+  
+    if (!empty($where_clause))
+    {
+      $query .= " WHERE $where_clause";
+    }
+    
   // Start generating the table of results
   echo '<table border="0" cellpadding="2">';
 
@@ -28,24 +60,7 @@
   $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
   // Query to get the results
-  $search_query = "SELECT * FROM riskyjobs";
-  $where_list = array();
-  $user_search = $_GET['usersearch'];
-  $search_words = explode(' ', $user_search);
-  
-  foreach ($search_words as $word) 
-  {
-      $where_list[] = " description LIKE '%word%' ";
-  }
-  
-  $where_clause = implode('OR', $where_list);
-  
-  if (!empty($where_clause))
-  {
-      $search_query .= " WHERE $where_clause";
-  }
-  
-  $result = mysqli_query($dbc, $search_query);
+  $result = mysqli_query($dbc, $query);
   while ($row = mysqli_fetch_array($result)) 
   {
     echo '<tr class="results">';
