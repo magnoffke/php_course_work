@@ -141,3 +141,11 @@
 [19-Oct-2015 23:51:03 UTC] PHP Stack trace:
 [19-Oct-2015 23:51:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_7/editprofile.php:0
 [19-Oct-2015 23:51:03 UTC] PHP   2. getimagesize() /home/ubuntu/workspace/php_course_work/lab_7/editprofile.php:52
+[26-Oct-2015 02:20:25 UTC] PHP Warning:  mysqli_query(): Empty query in /home/ubuntu/workspace/php_course_work/lab_8/search.php on line 48
+[26-Oct-2015 02:20:25 UTC] PHP Stack trace:
+[26-Oct-2015 02:20:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_8/search.php:0
+[26-Oct-2015 02:20:25 UTC] PHP   2. mysqli_query() /home/ubuntu/workspace/php_course_work/lab_8/search.php:48
+[26-Oct-2015 02:20:25 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/php_course_work/lab_8/search.php on line 49
+[26-Oct-2015 02:20:25 UTC] PHP Stack trace:
+[26-Oct-2015 02:20:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_8/search.php:0
+[26-Oct-2015 02:20:25 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/php_course_work/lab_8/search.php:49

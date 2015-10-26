@@ -29,3 +29,11 @@ INSERT INTO `riskyjobs` VALUES (16, 'Master Cat Juggler', 'Are you a practitione
 INSERT INTO `riskyjobs` VALUES (17, 'Tightrope Tester', 'If the thought of dangling for hours on end from great heights is your idea of a good time, then this job just may be for you. Every one of our tightropes goes through a rigorous 43 point test, culminating in a real live human hanging for a prolonged period of time. That could be you! We do provide safety nets but you''ll need to bring your own helmet and gloves. Here at our manufacturing facility in Big Top, Montana, we offer an incredible employment package with benefits ranging from Bring Your Pet to Work Week and Formal Fridays. We will need three references, including your verified maximum hang time and number of past falls. We''re the circus behind the circus!', 'Big Top', 'MT', '59923', 'Taut Enterprises, Inc.', '2008-11-14 21:17:16');
 INSERT INTO `riskyjobs` VALUES (18, 'Firefighter', 'The City of Dataville is hiring firefighters. No experience required - you will be trained. Non-smokers preferred. You must be physically fit and not afraid of heights (or heat). Although not required, familiarity with the working end of an axe is a plus.', 'Dataville', 'OH', '45448', 'City of Dataville', '2008-05-22 09:54:32');
 INSERT INTO `riskyjobs` VALUES (19, 'Golf Ball Picker Upper', 'Want to combine your love of golf and stunt driving into one exciting career? We have an opening for a golf ball picker upper that just might be for you. Get behind the wheel of the Range Raker 2000, and drive our golf range picking up balls while dodging the best efforts of fellow golfers to hit you. It''s all part of the service we offer, and your job will be to serve as a challenging target while picking up balls.', 'Arkadelphia', 'AL', '35033', 'Tee-Off Golf', '2008-08-12 04:54:12');
+
+
+SELECT * FROM riskyjobs;
+
+SELECT job_id, title, description FROM riskyjobs
+    WHERE title = 'Bull Fighter Matador';
+    
+SELECT job_id, title, description FROM riskyjobs WHERE description LIKE '%animals%';
