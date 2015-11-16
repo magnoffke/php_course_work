@@ -9,23 +9,26 @@
 </head>
 
 <body>
-    <h2>BMI Calculator</h2>
-    <p>Enter your information to calculate your BMI!</p>
+    <h1>BMI Calculator</h1>
+    <h2>Enter your information to calculate your BMI...</h2>
   
-    <form method="post" action="<?= $_SERVER['PHP_SELF'] ?>">
-    
-    <label for="noun">Enter Your Weight :</label>
-    <input type="text" id="weight" name="weight" /><br />
-    <label for="verb">Enter Your Height:</label>
-    <input type="text" id="height" name="height" /><br />
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <fieldset id="mainForm">
+        <label for="noun">Enter Your Weight (pounds):</label>
+        <input type="text" id="weight" name="weight" /><br />
+        <label for="verb">Enter Your Height (inches):</label>
+        <input type="text" id="height" name="height" /><br />
 
     <input type="submit" value="Submit" name="submit" />
   
     </form>
         
-    <h2>Your BMI: </h2>
+    <h3>Your BMI: </h3>
         
         <?php
+        
+        if (isset($_POST['submit']))
+        {
         
             $weight = $_POST['weight'];
             $height = $_POST['height'];
@@ -37,17 +40,19 @@
         	
         	if ($bmi >= 18.5 && $bmi <= 25) 
         	{
-        	    //don't use echo, Maggie - Find the replacement!
-        	    echo 'Your BMI is ' . round($bmi, 2) . ' . You are a normal weight.';
+        	    echo '<p>Your BMI is ' . round($bmi, 2) . '. You are a normal weight.</p>';
         	}
             elseif ($bmi < 18.5)
             {
-                echo 'Your BMI is ' . round($bmi, 2) . ' . You are underweight. You should probably see a doctor.';
+                echo '<p>Your BMI is ' . round($bmi, 2) . '. You are underweight. You should probably see a doctor.</p>';
             } 
             else
             {
-                echo 'Your BMI is ' . round($bmi, 2) . ' . You are overweight. You should probably see a doctor.';
+                echo '<p>Your BMI is ' . round($bmi, 2) . '. You are overweight. You should probably see a doctor.</p>';
             }
+            
+        }
+    
         
         ?>
  
