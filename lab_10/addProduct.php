@@ -1,7 +1,7 @@
-<? php
-    require_once('product.php');
-    require_once('tool.php');
-    require_once('electronic.php');
+<?php
+    require_once('Product.php');
+    require_once('Tool.php');
+    require_once('Electronic.php');
 ?>
 
 <!DOCTYPE html>
@@ -117,20 +117,21 @@
               {
                   switch ($_POST['form_type'])
                   {
-                    case 'Generic':
-                      $form = new Product();
-                      break;
-                    case 'Tool':
+                    case 'generic':
+                        $form = new Product();
+                        break;
+                    case 'tool':
                       $form = new Tool();
                       break;
-                    case 'Electronic':
+                    case 'electronic':
                       $form = new Electronic();
                       break;
-                    default :
+                    default:
                       $form = new Product();
                       break;
                   }
-                  $show_shipping_form = true;
+                
+                $show_shipping_form = true;
               } 
             }
           ?>
@@ -148,6 +149,7 @@
               </div>
             </fieldset>
           </form>
+          
           <?php else: ?>
             <h3>Choose a product type to display the shipping form!</h3>
           <?php endif; ?>
@@ -158,7 +160,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; Your Website 2015</p>
                 </div>
             </div>
             <!-- /.row -->
