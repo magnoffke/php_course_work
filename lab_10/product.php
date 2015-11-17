@@ -39,94 +39,20 @@ class Product
     
     public function postTo()
     {
-        return 'some_url.php';
+        return 'shippers/generic.php';
     }
     
     public funtion productType()
     {
-        return 'Generic';
+        return 'Generic Product';
     }
     
     public function renderForm()
     {
-        return file_get_contents('forms/generic_form.html');
+        return = file_get_contents('forms/generic_form.html');
+        
     }
 
 }
-
-class Tool extends Product
-{
-    private $shipper;
-    private $weight;
-    
-    public function setShipper($shipper)
-    {
-        $this->shipper = $shipper;
-    }
-
-    public function getPrice()
-    {
-        return $this->shipper;
-    }
-    
-    public function setWeight($weight)
-    {
-        $this->weight = $weight;
-    }
-
-    public function getWeight()
-    {
-        return $this->weight;
-    }
-    
-    public function postTo()
-    {
-        return 'some_url.php';
-    }
-    
-    public funtion productType()
-    {
-        return 'Tools';
-    }
-    
-    public function renderForm()
-    {
-        return file_get_contents('forms/tool_form.html');
-    }
-
-}
-
-class Electronic extends Product
-{
-    private $recyclable;
-    
-    public function setRecyclable($recyclable)
-    {
-        $this->recyclable = $recyclable;
-    }
-
-    public function getRecyclable()
-    {
-        return $this->recyclable;
-    }
-    
-    public function postTo()
-    {
-        return 'some_url.php';
-    }
-    
-    public funtion productType()
-    {
-        return 'Recyclable';
-    }
-    
-    public function renderForm()
-    {
-        return file_get_contents('forms/electronic_form.html');
-    }
-    
-}
-
-
     
 ?>

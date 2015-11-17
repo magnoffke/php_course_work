@@ -1,3 +1,9 @@
+<? php
+    require_once('product.php');
+    require_once('tool.php');
+    require_once('electronic.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -111,13 +117,13 @@
               {
                   switch ($_POST['form_type'])
                   {
-                    case 'generic':
+                    case 'Generic':
                       $form = new Product();
                       break;
-                    case 'tool':
+                    case 'Tool':
                       $form = new Tool();
                       break;
-                    case 'electronic':
+                    case 'Electronic':
                       $form = new Electronic();
                       break;
                     default :
