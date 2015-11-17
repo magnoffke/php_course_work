@@ -36,10 +36,25 @@ class Product
     {
         return $this->price;
     }
+    
+    public function postTo()
+    {
+        return 'some_url.php';
+    }
+    
+    public funtion productType()
+    {
+        return 'Generic';
+    }
+    
+    public function renderForm()
+    {
+        return file_get_contents('forms/generic_form.html');
+    }
 
 }
 
-class Tools extends Product
+class Tool extends Product
 {
     private $shipper;
     private $weight;
@@ -63,9 +78,25 @@ class Tools extends Product
     {
         return $this->weight;
     }
+    
+    public function postTo()
+    {
+        return 'some_url.php';
+    }
+    
+    public funtion productType()
+    {
+        return 'Tools';
+    }
+    
+    public function renderForm()
+    {
+        return file_get_contents('forms/tool_form.html');
+    }
+
 }
 
-class Electronics extends Product
+class Electronic extends Product
 {
     private $recyclable;
     
@@ -78,6 +109,22 @@ class Electronics extends Product
     {
         return $this->recyclable;
     }
+    
+    public function postTo()
+    {
+        return 'some_url.php';
+    }
+    
+    public funtion productType()
+    {
+        return 'Recyclable';
+    }
+    
+    public function renderForm()
+    {
+        return file_get_contents('forms/electronic_form.html');
+    }
+    
 }
 
 
