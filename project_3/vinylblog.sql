@@ -1,0 +1,10 @@
+CREATE TABLE vinyl_blog (
+id INT(6) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+artist VARCHAR(30) NOT NULL,
+album_name VARCHAR(30) NOT NULL,
+year_released VARCHAR(4) NOT NULL,
+description VARCHAR(500) NOT NULL,
+category VARCHAR (30) NOT NULL, 
+post_date VARCHAR(30) NOT NULL,
+file_path VARCHAR(200)
+);
