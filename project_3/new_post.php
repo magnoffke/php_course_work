@@ -1,5 +1,7 @@
 <?php include('header.php') ?>
-<?php require_once('db.php') ?>
+<?php
+  require_once('authorize.php');
+?>
 
 <div class="row">
     <div class="col-lg-12">
@@ -17,67 +19,46 @@
         <legend>Add new post</legend>
           
         <div class="form-group">
-          <label for="ArtistName" class="col-lg-2 control-label">Artist Name</label>
+          <label for="artistname" class="col-lg-2 control-label">Artist Name</label>
           <div class="col-lg-10">
-            <input type="text" class="form-control" name="ArtistName" id="ArtistName" >
+            <input type="text" class="form-control" name="artistname" id="artistname" >
           </div>
         </div>
           
           <div class="form-group">
-      <label for="AlbumName" class="col-lg-2 control-label">AlbumName</label>
+      <label for="albumname" class="col-lg-2 control-label">Album Name</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" name="AlbumName" id="AlbumName" >
+        <input type="text" class="form-control" name="albumname" id="albumname" >
       </div>
     </div>
 
     <div class="form-group">
-      <label for="YearReleased" class="col-lg-2 control-label">Year Released</label>
+      <label for="yearreleased" class="col-lg-2 control-label">Year Released</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" name="YearReleased" id="YearReleased" >
+        <input type="text" class="form-control" name="yearreleased" id="yearreleased" >
       </div>
     </div>
     
     <div class="form-group">
-        <label for="Category">Category</label>
-        <select name="Category">
+        <label for="category">Category</label>
+        <select name="category" id="select">
               <option value="Rock">Rock</option>
               <option value="Pop">Pop</option>
-              <option value="fiat">Fiat</option>
-              <option value="audi">Audi</option>
+              <option value="Folk">Folk</option>
+              <option value="Other">Other</option>
         </select>
     </div>
 
     <div class="form-group">
-      <label for="Description" class="col-lg-2 control-label">Description</label>
+      <label for="description" class="col-lg-2 control-label">Description</label>
       <div class="col-lg-10">
-        <textarea class="form-control" rows="3" id="Description" name="Description"></textarea>
+        <textarea class="form-control" rows="3" id="description" name="description"></textarea>
       </div>
     </div> 
     
-          
           <div class="form-group">
-            <input name="user_file" type="file"/>
+            <p>Upload image of album</p><input name="albumart" type="file"/>
           </div>
-          
-          
-          <div class="form-group">
-              Description:
-              <textarea name="description" class="form-control" rows="3">
-              </textarea>
-          </div>
-          <div class="form-group">
-            <input type=submit value="Get File"/>
-          </div>
-         
-         </fieldset>  
-      </form>
-      
-
-  <fieldset>
- 
-
-
-
  
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">

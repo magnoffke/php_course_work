@@ -1,10 +1,9 @@
-CREATE TABLE vinyl_blog (
+CREATE TABLE vinylblog (
 id INT(6) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-artist VARCHAR(30) NOT NULL,
-album_name VARCHAR(30) NOT NULL,
-year_released VARCHAR(4) NOT NULL,
-description VARCHAR(500) NOT NULL,
-category VARCHAR (30) NOT NULL, 
-post_date VARCHAR(30) NOT NULL,
-file_path VARCHAR(200)
+artistname VARCHAR(200),
+albumname VARCHAR(200),
+yearreleased VARCHAR(4),
+description VARCHAR(500),
+category VARCHAR (100), 
+image VARCHAR(200)
 );

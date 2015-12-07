@@ -1,39 +1,67 @@
 <?php
-    $filename = $_FILES['user_file']['name'];
-    $filesize = $_FILES['user_file']['size'];
-    $directory = $_SERVER['DOCUMENT_ROOT'] . '/uploads/';
-    $uploadFile = $directory . $filename;
-    $description = $_POST['description'];
-    $time = date("Y-m-d H:i:s");
-    
-    $mysqli = mysqli_connect("localhost", "root", "", "instasomething");
+    require_once ('connectvars.php');
+    require_once ('appvars.php');
 
-    if (file_exists($_FILES['user_file']['tmp_name']))
+    if (isset($_POST['submit'])) 
     {
-        if (move_uploaded_file($_FILES['user_file']['tmp_name'], $uploadFile))
+    $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);    
+
+    //get the info from the post
+    $albumart = mysqli_real_escape_string($dbc, trim($_FILES['albumart']['name']));
+    $albumart_size = $_FILES['albumart']['size'];
+    $albumart_type = $_FILES['albumart']['type'];
+    
+    
+    $artistname = $_POST['artistname'];
+    $albumname = $_POST['albumname'];
+    $yearreleased = $_POST['yearreleased'];
+    $category = $_POST['category'];
+    $description = $_POST['description'];
+    
+        if (!empty($description) && !empty($artistname) && !empty($albumname) && !empty($category))
         {
-            echo 'The file is valid and was successfully uploaded.  <br />';
-            echo "The file, $filename, is $filesize bytes.<br />";
+            if ((($albumart_type == 'image/gif') || ($albumart_type == 'image/jpeg') || ($albumart_type == 'image/pjpeg') || ($albumart_type == 'image/png'))
+                && ($albumart_size > 0) && ($albumart_size <= GW_MAXFILESIZE))
+            {
             
-            $query = "INSERT INTO Posts (file_path, description, post_date) VALUES ('$filename', '$description', '$time');";
-            $result = mysqli_query($mysqli, $query);
-            if (!$result) {
-                exit('Database query error: '. mysql_error($mysqli));
+                if ($_FILES['screenshot']['error'] == 0) 
+                {
+                // Move the file to the target upload folder
+                $target = GW_UPLOADPATH . $albumart;
+                    if (move_uploaded_file($_FILES['albumart']['tmp_name'], $target)) 
+                    {
+                    
+                    // Connect to the database   
+                    $dbc = mysqli_connect('localhost', 'magnoffke', '', 'vinyldatabase');
+                    //write the data to the database
+                    $query = "INSERT INTO vinylblog (artistname, albumname, yearreleased, category, description, image) " . 
+                    "VALUES ('$artistname', '$albumname', '$yearreleased', '$category', '$description', '$albumart')";
+                    
+                    mysqli_query($dbc, $query)
+        	        or die('Error querying database.');
+            
+                    echo 'Your post  was successfully uploaded.  <br />';
+                    echo '<p><a href="index.php">&lt;&lt; Back to blog home.</a></p>';
+                    
+                    mysqli_close($dbc);
+                    }
+            
+                }
+                else
+                {
+                    echo '<p class="error">Sorry, there was a problem uploading your post.</p>';
+                }
             }
             else
             {
-              // We want them to see their post
-              header('Location: index.php');
+                echo '<p class="error">The album art must be a GIF, JPEG, or PNG image file no greater than ' . (GW_MAXFILESIZE / 1024) . ' KB in size.</p>';
             }
+    
         }
-        else
-        {
-          echo 'The file was not moved';
+        
+        else {
+            echo '<p class="error">Please enter all of the information to add your blog post.</p>';
         }
     }
-    else
-    {
-        echo "The file is not there!";
-    }
-
+    
 ?>

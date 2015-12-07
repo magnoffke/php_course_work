@@ -11,19 +11,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Noffke Vinyl Collection</a>
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="aboutus.html">About</a>
+                        <a href="#">About</a>
                     </li>
                     <li>
-                        <a href="#">Alphabetical Listing</a>
+                        <a href="#">Services</a>
                     </li>
                     <li>
-                        <a href="#">Albums by Category</a></a>
+                        <a href="#">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -32,7 +32,7 @@
         <!-- /.container -->
     </nav>
 
-<!-- Page Content -->
+    <!-- Page Content -->
     <div class="container">
 
         <div class="row">
@@ -41,8 +41,8 @@
             <div class="col-md-8">
 
                 <h1 class="page-header">
-                    Noffke Vinyl
-                    <small>Our Collection</small>
+                    Page Heading
+                    <small>Secondary Text</small>
                 </h1>
 
                 <!-- First Blog Post -->
@@ -93,6 +93,15 @@
 
                 <hr>
 
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="previous">
+                        <a href="#">&larr; Older</a>
+                    </li>
+                    <li class="next">
+                        <a href="#">Newer &rarr;</a>
+                    </li>
+                </ul>
 
             </div>
 
@@ -101,33 +110,47 @@
 
                 <!-- Blog Search Well -->
                 <div class="well">
-                    <h4>Post a New Record</h4>
+                    <h4>Blog Search</h4>
                     <div class="input-group">
-                    <p><i>You must supply a username and password to add a new record.</i></p>    
-                        <form action="new_post.php">
-                            <input type="submit" value="Get Started">
-                        </form>
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
                     </div>
                     <!-- /.input-group -->
                 </div>
 
                 <!-- Blog Categories Well -->
                 <div class="well">
-                    <h4>See Vinyl by Genre</h4>
+                    <h4>Blog Categories</h4>
                     <div class="row">
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                                <li><a href="#">Rock</a>
+                                <li><a href="#">Category Name</a>
                                 </li>
-                                <li><a href="#">Pop</a>
+                                <li><a href="#">Category Name</a>
                                 </li>
-                                <li><a href="#">Folk</a>
+                                <li><a href="#">Category Name</a>
                                 </li>
-                                <li><a href="#">Other</a>
+                                <li><a href="#">Category Name</a>
                                 </li>
                             </ul>
                         </div>
-
+                        <!-- /.col-lg-6 -->
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                            </ul>
+                        </div>
                         <!-- /.col-lg-6 -->
                     </div>
                     <!-- /.row -->
@@ -135,9 +158,8 @@
 
                 <!-- Side Widget Well -->
                 <div class="well">
-                    <h4>About Us</h4>
-                    <p>The Noffkes have been collecting vinyl for at least 10 years.</p>
-                    <a href="aboutus.html">Read more about us &raquo;</a>
+                    <h4>Side Widget Well</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
                 </div>
 
             </div>
@@ -146,39 +168,5 @@
         <!-- /.row -->
 
         <hr>
-            <?php
-
-            require_once('appvars.php');
-            require_once('connectvars.php');
-    
-            // Connect to the database 
-            $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
-            // Retrieve the score data from MySQL
-            $query = "SELECT * FROM vinylblog ORDER BY id DESC";
-            $data = mysqli_query($dbc, $query);
-            
-            // Loop through the array of albums, formatting it as HTML 
-              echo '<table>';
-              $i = 0;
-              while ($row = mysqli_fetch_array($data)) { 
-                // Display the album data
-                if ($i == 0) {
-                  echo '<tr><td colspan="2" class="albumrecord">Artist: ' . $row['artistname'] . '</td></tr>';
-                }
-                
-                echo '<tr><td class="albumrecord">';
-                echo '<span class="score">' . $row['score'] . '</span><br />';
-                echo '<strong>Name:</strong> ' . $row['name'] . '<br />';
-                echo '<strong>Date:</strong> ' . $row['date'] . '</td></tr>';
-                echo '<td><img src="' . GW_UPLOADPATH . $row['albumart'] . '" alt="album image" /></td></tr>';
- 
-                $i++;
-              }
-              echo '</table>';
-            
-              mysqli_close($dbc);
-            ?>
-    
 
 <?php include('footer.php') ?>        

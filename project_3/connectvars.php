@@ -3,5 +3,5 @@
   define('DB_HOST', 'localhost');
   define('DB_USER', 'magnoffke');
   define('DB_PASSWORD', '');
-  define('DB_NAME', 'vinyldatabase');
+  define('DB_NAME', 'vinyl');
 ?>

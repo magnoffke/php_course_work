@@ -5820,6 +5820,8 @@ button.list-group-item-danger.active:focus {
   padding-bottom: 75%;
 }
 .well {
+  display: block;
+  float: right;
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
