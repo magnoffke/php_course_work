@@ -4,27 +4,26 @@
 
     if (isset($_POST['submit'])) 
     {
-    $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);    
-
-    //get the info from the post
-    $albumart = mysqli_real_escape_string($dbc, trim($_FILES['albumart']['name']));
+      
+     //get the info from the post
+    $albumart = $_FILES['albumart']['name'];
     $albumart_size = $_FILES['albumart']['size'];
     $albumart_type = $_FILES['albumart']['type'];
     
     
     $artistname = $_POST['artistname'];
-    $albumname = $_POST['albumname'];
+    $album = $_POST['album'];
     $yearreleased = $_POST['yearreleased'];
     $category = $_POST['category'];
     $description = $_POST['description'];
     
-        if (!empty($description) && !empty($artistname) && !empty($albumname) && !empty($category))
+        if (!empty($description) && !empty($artistname) && !empty($album) && !empty($category))
         {
             if ((($albumart_type == 'image/gif') || ($albumart_type == 'image/jpeg') || ($albumart_type == 'image/pjpeg') || ($albumart_type == 'image/png'))
                 && ($albumart_size > 0) && ($albumart_size <= GW_MAXFILESIZE))
             {
             
-                if ($_FILES['screenshot']['error'] == 0) 
+                if ($_FILES['albumart']['error'] == 0) 
                 {
                 // Move the file to the target upload folder
                 $target = GW_UPLOADPATH . $albumart;
@@ -32,10 +31,10 @@
                     {
                     
                     // Connect to the database   
-                    $dbc = mysqli_connect('localhost', 'magnoffke', '', 'vinyldatabase');
+                    $dbc = mysqli_connect('localhost', 'magnoffke', '', 'vinyldatabase') or die('Error connecting to MySQL server.');
                     //write the data to the database
-                    $query = "INSERT INTO vinylblog (artistname, albumname, yearreleased, category, description, image) " . 
-                    "VALUES ('$artistname', '$albumname', '$yearreleased', '$category', '$description', '$albumart')";
+                    $query = "INSERT INTO vinylblog (id, artistname, album, yearreleased, category, description, image) 
+                    VALUES (0, '$artistname', '$album', '$yearreleased', '$category', '$description', '$albumart')";
                     
                     mysqli_query($dbc, $query)
         	        or die('Error querying database.');

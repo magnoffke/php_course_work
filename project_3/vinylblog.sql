@@ -1,7 +1,7 @@
 CREATE TABLE vinylblog (
 id INT(6) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-artistname VARCHAR(200),
-albumname VARCHAR(200),
+artistname VARCHAR(500),
+album VARCHAR(600),
 yearreleased VARCHAR(4),
 description VARCHAR(500),
 category VARCHAR (100), 

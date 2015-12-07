@@ -20,10 +20,10 @@
                         <a href="aboutus.html">About</a>
                     </li>
                     <li>
-                        <a href="#">Alphabetical Listing</a>
+                        <a href="alphabeticalArtists/alphalist.php">Alphabetical Artist Listing</a>
                     </li>
                     <li>
-                        <a href="#">Albums by Category</a></a>
+                        <a href="genreArtists/genrelist.php">Albums by Genre</a></a>
                     </li>
                 </ul>
             </div>
@@ -46,8 +46,38 @@
                 </h1>
 
                 <!-- First Blog Post -->
+                
+            <?php
+
+            require_once('appvars.php');
+            require_once('connectvars.php');
+    
+            // Connect to the database 
+            $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+
+            // Retrieve the score data from MySQL
+            $query = "SELECT * FROM vinylblog ORDER BY id DESC";
+            $result= mysqli_query($dbc, $query);
+            
+            // Loop through the array of albums, formatting it as HTML 
+              echo '<table>';
+              while ($row = mysqli_fetch_array($result)) { 
+                // Display the album data
+                echo '<tr><td class="albumrecord">';
+                echo '<span class="score">' . $row['album'] . '</span><br />';
+                echo '<strong>Name:</strong> ' . $row['yearreleased'] . '<br />';
+                echo '<strong>Date:</strong> ' . $row['category'] . '</td></tr>';
+                echo '<strong>Date:</strong> ' . $row['description'] . '</td></tr>';
+                echo '<td><img src="' . GW_UPLOADPATH . $row['albumart'] . '" alt="album image" /></td></tr>';
+ 
+              }
+              echo '</table>';
+            
+              mysqli_close($dbc);
+            ?>
+    
                 <h2>
-                    <a href="#">Blog Post Title</a>
+                    Blog Post Title
                 </h2>
                 <p class="lead">
                     by <a href="index.php">Start Bootstrap</a>
@@ -117,13 +147,83 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                                <li><a href="#">Rock</a>
+                                <li><a href="genreArtists/rock.php">Rock</a>
                                 </li>
-                                <li><a href="#">Pop</a>
+                                <li><a href="genreArtists/pop.php">Pop</a>
                                 </li>
-                                <li><a href="#">Folk</a>
+                                <li><a href="genreArtists/folk.php">Folk</a>
                                 </li>
-                                <li><a href="#">Other</a>
+                                <li><a href="genreArtists/other.php">Other</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- /.col-lg-6 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                
+                <div class="well">
+                    <h4>See Vinyl Alphabetically</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="alphabeticalArtists/a.php">A</a>
+                                </li>
+                                <li><a href="alphabeticalArtists/b.php">B</a>
+                                </li>
+                                <li><a href="alphabeticalArtists/c.php">C</a>
+                                </li>
+                                <li><a href="alphabeticalArtists/d.php">D</a>
+                                </li>
+                                <li><a href="alphabeticalArtists/e.php">E</a>
+                                </li>
+                                <li><a href="alphabeticalArtists/f.php">F</a>
+                                </li>
+                                <li><a href="alphabeticalArtists/g.php">G</a>
+                                </li>
+                                <li><a href="alphabeticalArtists/h.php">H</a>
+                                </li>
+                                <li><a href="alphabeticalArtists/i.php">I</a>
+                                </li>
+                                <li><a href="alphabeticalArtists/j.php">J</a>
+                                </li>
+                                <li><a href="alphabeticalArtists/k.php">K</a>
+                                </li>
+                                <li><a href="#">L</a>
+                                </li>
+                                <li><a href="#">M</a>
+                                </li>
+                                <li><a href="#">N</a>
+                                </li>
+                                <li><a href="#">O</a>
+                                </li>
+                                <li><a href="#">P</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Q</a>
+                                </li>
+                                <li><a href="#">R</a>
+                                </li>
+                                <li><a href="#">S</a>
+                                </li>
+                                <li><a href="#">T</a>
+                                </li>
+                                <li><a href="#">U</a>
+                                </li>
+                                <li><a href="#">V</a>
+                                </li>
+                                <li><a href="#">W</a>
+                                </li>
+                                <li><a href="#">X</a>
+                                </li>
+                                <li><a href="#">Y</a>
+                                </li>
+                                <li><a href="#">Z</a>
                                 </li>
                             </ul>
                         </div>
@@ -146,39 +246,6 @@
         <!-- /.row -->
 
         <hr>
-            <?php
-
-            require_once('appvars.php');
-            require_once('connectvars.php');
-    
-            // Connect to the database 
-            $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
-            // Retrieve the score data from MySQL
-            $query = "SELECT * FROM vinylblog ORDER BY id DESC";
-            $data = mysqli_query($dbc, $query);
-            
-            // Loop through the array of albums, formatting it as HTML 
-              echo '<table>';
-              $i = 0;
-              while ($row = mysqli_fetch_array($data)) { 
-                // Display the album data
-                if ($i == 0) {
-                  echo '<tr><td colspan="2" class="albumrecord">Artist: ' . $row['artistname'] . '</td></tr>';
-                }
-                
-                echo '<tr><td class="albumrecord">';
-                echo '<span class="score">' . $row['score'] . '</span><br />';
-                echo '<strong>Name:</strong> ' . $row['name'] . '<br />';
-                echo '<strong>Date:</strong> ' . $row['date'] . '</td></tr>';
-                echo '<td><img src="' . GW_UPLOADPATH . $row['albumart'] . '" alt="album image" /></td></tr>';
  
-                $i++;
-              }
-              echo '</table>';
-            
-              mysqli_close($dbc);
-            ?>
-    
 
 <?php include('footer.php') ?>        

@@ -26,26 +26,27 @@
         </div>
           
           <div class="form-group">
-      <label for="albumname" class="col-lg-2 control-label">Album Name</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" name="albumname" id="albumname" >
-      </div>
-    </div>
+          <label for="album" class="col-lg-2 control-label">Album Name</label>
+            <div class="col-lg-10">
+              <input type="text" class="form-control" name="album" id="album" >
+            </div>
+          </div>
 
-    <div class="form-group">
-      <label for="yearreleased" class="col-lg-2 control-label">Year Released</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" name="yearreleased" id="yearreleased" >
-      </div>
-    </div>
+        <div class="form-group">
+          <label for="yearreleased" class="col-lg-2 control-label">Year Released</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" name="yearreleased" id="yearreleased" >
+          </div>
+        </div>
     
     <div class="form-group">
         <label for="category">Category</label>
         <select name="category" id="select">
-              <option value="Rock">Rock</option>
-              <option value="Pop">Pop</option>
-              <option value="Folk">Folk</option>
-              <option value="Other">Other</option>
+              <option value="rock">Rock</option>
+              <option value="pop">Pop</option>
+              <option value="folk">Folk</option>
+              <option value="hiphop">Hip Hop</option>
+              <option value="other">Other</option>
         </select>
     </div>
 

@@ -1,0 +1,80 @@
+[07-Dec-2015 04:13:23 UTC] PHP Warning:  include(header.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 1
+[07-Dec-2015 04:13:23 UTC] PHP Stack trace:
+[07-Dec-2015 04:13:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:13:23 UTC] PHP Warning:  include(): Failed opening 'header.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 1
+[07-Dec-2015 04:13:23 UTC] PHP Stack trace:
+[07-Dec-2015 04:13:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:13:23 UTC] PHP Warning:  require_once(connectvars.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 2
+[07-Dec-2015 04:13:23 UTC] PHP Stack trace:
+[07-Dec-2015 04:13:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:13:23 UTC] PHP Fatal error:  require_once(): Failed opening required 'connectvars.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 2
+[07-Dec-2015 04:13:23 UTC] PHP Stack trace:
+[07-Dec-2015 04:13:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:13:42 UTC] PHP Warning:  include(./header.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 1
+[07-Dec-2015 04:13:42 UTC] PHP Stack trace:
+[07-Dec-2015 04:13:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:13:42 UTC] PHP Warning:  include(): Failed opening './header.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 1
+[07-Dec-2015 04:13:42 UTC] PHP Stack trace:
+[07-Dec-2015 04:13:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:13:42 UTC] PHP Warning:  require_once(connectvars.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 2
+[07-Dec-2015 04:13:42 UTC] PHP Stack trace:
+[07-Dec-2015 04:13:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:13:42 UTC] PHP Fatal error:  require_once(): Failed opening required 'connectvars.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 2
+[07-Dec-2015 04:13:42 UTC] PHP Stack trace:
+[07-Dec-2015 04:13:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:14:23 UTC] PHP Warning:  require_once(connectvars.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 2
+[07-Dec-2015 04:14:23 UTC] PHP Stack trace:
+[07-Dec-2015 04:14:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:14:23 UTC] PHP Fatal error:  require_once(): Failed opening required 'connectvars.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 2
+[07-Dec-2015 04:14:23 UTC] PHP Stack trace:
+[07-Dec-2015 04:14:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:14:37 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 18
+[07-Dec-2015 04:14:37 UTC] PHP Stack trace:
+[07-Dec-2015 04:14:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:14:37 UTC] PHP   2. mysql_fetch_array(*uninitialized*) /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:18
+[07-Dec-2015 04:15:29 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 18
+[07-Dec-2015 04:15:29 UTC] PHP Stack trace:
+[07-Dec-2015 04:15:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:15:29 UTC] PHP   2. mysql_fetch_array(*uninitialized*) /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:18
+[07-Dec-2015 04:15:48 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 18
+[07-Dec-2015 04:15:48 UTC] PHP Stack trace:
+[07-Dec-2015 04:15:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:15:48 UTC] PHP   2. mysql_fetch_array(*uninitialized*) /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:18
+[07-Dec-2015 04:17:03 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 18
+[07-Dec-2015 04:17:03 UTC] PHP Stack trace:
+[07-Dec-2015 04:17:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:17:03 UTC] PHP   2. mysql_fetch_array(*uninitialized*) /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:18
+[07-Dec-2015 04:17:04 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 18
+[07-Dec-2015 04:17:04 UTC] PHP Stack trace:
+[07-Dec-2015 04:17:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:17:04 UTC] PHP   2. mysql_fetch_array(*uninitialized*) /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:18
+[07-Dec-2015 04:19:47 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 18
+[07-Dec-2015 04:19:47 UTC] PHP Stack trace:
+[07-Dec-2015 04:19:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:19:47 UTC] PHP   2. mysql_fetch_array(*uninitialized*) /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:18
+[07-Dec-2015 04:28:26 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 18
+[07-Dec-2015 04:28:26 UTC] PHP Stack trace:
+[07-Dec-2015 04:28:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:28:26 UTC] PHP   2. mysql_fetch_array(*uninitialized*) /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:18
+[07-Dec-2015 04:29:30 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, string given in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 10
+[07-Dec-2015 04:29:30 UTC] PHP Stack trace:
+[07-Dec-2015 04:29:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:29:30 UTC] PHP   2. mysqli_query(*uninitialized*, *uninitialized*) /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:10
+[07-Dec-2015 04:29:30 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 18
+[07-Dec-2015 04:29:30 UTC] PHP Stack trace:
+[07-Dec-2015 04:29:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:29:30 UTC] PHP   2. mysqli_fetch_array(*uninitialized*) /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:18
+[07-Dec-2015 04:29:30 UTC] PHP Warning:  mysql_close(): no MySQL-Link resource supplied in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 26
+[07-Dec-2015 04:29:30 UTC] PHP Stack trace:
+[07-Dec-2015 04:29:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:29:30 UTC] PHP   2. mysql_close() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:26
+[07-Dec-2015 04:32:11 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, string given in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 10
+[07-Dec-2015 04:32:11 UTC] PHP Stack trace:
+[07-Dec-2015 04:32:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:32:11 UTC] PHP   2. mysqli_query(*uninitialized*, *uninitialized*) /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:10
+[07-Dec-2015 04:32:11 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 18
+[07-Dec-2015 04:32:11 UTC] PHP Stack trace:
+[07-Dec-2015 04:32:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:0
+[07-Dec-2015 04:32:11 UTC] PHP   2. mysqli_fetch_array(*uninitialized*) /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php:18
+[07-Dec-2015 04:36:55 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 20
+[07-Dec-2015 04:39:33 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/php_course_work/project_3/alphabeticalArtists/a.php on line 12
