@@ -1,4 +1,7 @@
 <?php include('header.php') ?>
+<?php  require_once ('connectvars.php');
+        require_once ('appvars.php');
+        ?>
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -39,13 +42,14 @@
 
             <!-- Blog Entries Column -->
             <div class="col-md-8">
+                <img style="border:2px solid" width="699" height="264" alt="RecordSplash" title="RecordSplash" src="images/recordsheader.jpg" />
 
                 <h1 class="page-header">
                     Noffke Vinyl
-                    <small>Our Collection</small>
+                    <small>Our Collection in No Particular Order</small>
                 </h1>
 
-                <!-- First Blog Post -->
+                <!-- Blog Posts -->
                 
             <?php
 
@@ -63,65 +67,26 @@
               echo '<table>';
               while ($row = mysqli_fetch_array($result)) { 
                 // Display the album data
-                echo '<tr><td class="albumrecord">';
-                echo '<span class="score">' . $row['album'] . '</span><br />';
-                echo '<strong>Name:</strong> ' . $row['yearreleased'] . '<br />';
-                echo '<strong>Date:</strong> ' . $row['category'] . '</td></tr>';
-                echo '<strong>Date:</strong> ' . $row['description'] . '</td></tr>';
-                echo '<td><img src="' . GW_UPLOADPATH . $row['albumart'] . '" alt="album image" /></td></tr>';
- 
+                echo '<tr><td>';
+                echo '<h3>' . $row['artistname'] . ': ' . $row['album'] . '</h3><br />';
+                echo '</tr></td>';
+                echo '<tr><td>';
+                echo '<strong>Year Released:</strong> ' . $row['yearreleased'] . '<br />';
+                echo '</tr></td>';
+                echo '<tr><td>';
+                echo '<strong>Genre:</strong> ' . $row['category'] . '</td></tr>';
+                echo '<tr><td>';
+                echo '<strong>Description:</strong> ' . $row['moreinfo'] . '</td></tr>';
+                echo '<tr><td>';
+                echo '<td><img src="' . GW_UPLOADPATH . $row['image'] . '" alt="album image" /></td></tr>';
               }
               echo '</table>';
+              
             
               mysqli_close($dbc);
             ?>
     
-                <h2>
-                    Blog Post Title
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">Start Bootstrap</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
-                <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
-                <hr>
-
-                <!-- Second Blog Post -->
-                <h2>
-                    <a href="#">Blog Post Title</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">Start Bootstrap</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
-                <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quasi, fugiat, asperiores harum voluptatum tenetur a possimus nesciunt quod accusamus saepe tempora ipsam distinctio minima dolorum perferendis labore impedit voluptates!</p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-
-                <hr>
-
-                <!-- Third Blog Post -->
-                <h2>
-                    <a href="#">Blog Post Title</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">Start Bootstrap</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
-                <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, voluptates, voluptas dolore ipsam cumque quam veniam accusantium laudantium adipisci architecto itaque dicta aperiam maiores provident id incidunt autem. Magni, ratione.</p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-
-                <hr>
 
 
             </div>

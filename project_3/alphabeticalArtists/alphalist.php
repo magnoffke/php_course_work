@@ -5,7 +5,7 @@
 <div id="container"><!-- open big container -->
 
 
-<img style="border:5px solid" width="699" height="264" alt="RecordSplash" title="RecordSplash" src="../images/recordsheader.jpg" />
+<img style="border:2px solid" width="699" height="264" alt="RecordSplash" title="RecordSplash" src="../images/recordsheader.jpg" />
 
 <br clear="all" />
 <h2>Browse Artists Alphabetically</h2>

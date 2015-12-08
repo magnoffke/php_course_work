@@ -3,6 +3,13 @@
   require_once('authorize.php');
 ?>
 
+<?php
+    require_once ('connectvars.php');
+    require_once ('appvars.php');
+    session_start();
+?>
+
+
 <div class="row">
     <div class="col-lg-12">
         <h1>Vinyl Collection</h1>
@@ -51,14 +58,14 @@
     </div>
 
     <div class="form-group">
-      <label for="description" class="col-lg-2 control-label">Description</label>
+      <label for="moreinfo" class="col-lg-2 control-label">Description</label>
       <div class="col-lg-10">
-        <textarea class="form-control" rows="3" id="description" name="description"></textarea>
+        <input type="text" class="form-control" id="moreinfo" name="moreinfo"></input>
       </div>
     </div> 
     
           <div class="form-group">
-            <p>Upload image of album</p><input name="albumart" type="file"/>
+            <p>Upload image of album</p><input name="image" type="file"/>
           </div>
  
     <div class="form-group">
