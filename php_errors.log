@@ -1,0 +1,151 @@
+[14-Sep-2015 01:38:28 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/ubuntu/workspace/php_course_work/lab_2/report.php on line 20
+[14-Sep-2015 02:33:02 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'magnoffke@localhost'@'localhost' (using password: NO) in /home/ubuntu/workspace/php_course_work/lab_2/report.php on line 9
+[14-Sep-2015 02:33:02 UTC] PHP Stack trace:
+[14-Sep-2015 02:33:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_2/report.php:0
+[14-Sep-2015 02:33:02 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_2/report.php:9
+[14-Sep-2015 02:35:42 UTC] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'aleindatabase' in /home/ubuntu/workspace/php_course_work/lab_2/report.php on line 9
+[14-Sep-2015 02:35:42 UTC] PHP Stack trace:
+[14-Sep-2015 02:35:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_2/report.php:0
+[14-Sep-2015 02:35:42 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_2/report.php:9
+[14-Sep-2015 02:36:17 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'magnoffke@localhost'@'localhost' (using password: NO) in /home/ubuntu/workspace/php_course_work/lab_2/report.php on line 9
+[14-Sep-2015 02:36:17 UTC] PHP Stack trace:
+[14-Sep-2015 02:36:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_2/report.php:0
+[14-Sep-2015 02:36:17 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_2/report.php:9
+[21-Sep-2015 22:33:12 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_3/addemail.php on line 12
+[21-Sep-2015 22:33:12 UTC] PHP Stack trace:
+[21-Sep-2015 22:33:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_3/addemail.php:0
+[21-Sep-2015 22:33:12 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_3/addemail.php:12
+[28-Sep-2015 02:03:12 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php on line 16
+[28-Sep-2015 02:04:15 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php on line 18
+[28-Sep-2015 02:23:15 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php on line 53
+[28-Sep-2015 02:25:57 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php on line 71
+[28-Sep-2015 23:30:31 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php on line 81
+[28-Sep-2015 23:35:32 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php on line 44
+[28-Sep-2015 23:35:32 UTC] PHP Stack trace:
+[28-Sep-2015 23:35:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php:0
+[28-Sep-2015 23:35:32 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php:44
+[28-Sep-2015 23:35:34 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php on line 44
+[28-Sep-2015 23:35:34 UTC] PHP Stack trace:
+[28-Sep-2015 23:35:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php:0
+[28-Sep-2015 23:35:34 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php:44
+[28-Sep-2015 23:35:35 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php on line 44
+[28-Sep-2015 23:35:35 UTC] PHP Stack trace:
+[28-Sep-2015 23:35:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php:0
+[28-Sep-2015 23:35:35 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php:44
+[28-Sep-2015 23:35:53 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php on line 44
+[28-Sep-2015 23:35:53 UTC] PHP Stack trace:
+[28-Sep-2015 23:35:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php:0
+[28-Sep-2015 23:35:53 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php:44
+[28-Sep-2015 23:38:47 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php on line 12
+[28-Sep-2015 23:38:47 UTC] PHP Stack trace:
+[28-Sep-2015 23:38:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php:0
+[28-Sep-2015 23:38:47 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php:12
+[28-Sep-2015 23:39:51 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php on line 12
+[28-Sep-2015 23:39:51 UTC] PHP Stack trace:
+[28-Sep-2015 23:39:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php:0
+[28-Sep-2015 23:39:51 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php:12
+[28-Sep-2015 23:40:57 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php on line 12
+[28-Sep-2015 23:40:57 UTC] PHP Stack trace:
+[28-Sep-2015 23:40:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php:0
+[28-Sep-2015 23:40:57 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php:12
+[28-Sep-2015 23:42:41 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php on line 12
+[28-Sep-2015 23:42:41 UTC] PHP Stack trace:
+[28-Sep-2015 23:42:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php:0
+[28-Sep-2015 23:42:41 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php:12
+[28-Sep-2015 23:43:28 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_3/removeemail.php on line 12
+[28-Sep-2015 23:43:28 UTC] PHP Stack trace:
+[28-Sep-2015 23:43:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_3/removeemail.php:0
+[28-Sep-2015 23:43:28 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_3/removeemail.php:12
+[28-Sep-2015 23:44:03 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_3/removeemail.php on line 12
+[28-Sep-2015 23:44:03 UTC] PHP Stack trace:
+[28-Sep-2015 23:44:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_3/removeemail.php:0
+[28-Sep-2015 23:44:03 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_3/removeemail.php:12
+[28-Sep-2015 23:45:01 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_3/removeemail.php on line 12
+[28-Sep-2015 23:45:01 UTC] PHP Stack trace:
+[28-Sep-2015 23:45:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_3/removeemail.php:0
+[28-Sep-2015 23:45:01 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_3/removeemail.php:12
+[28-Sep-2015 23:45:48 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_3/removeemail.php on line 12
+[28-Sep-2015 23:45:48 UTC] PHP Stack trace:
+[28-Sep-2015 23:45:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_3/removeemail.php:0
+[28-Sep-2015 23:45:48 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_3/removeemail.php:12
+[28-Sep-2015 23:47:55 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php on line 12
+[28-Sep-2015 23:47:55 UTC] PHP Stack trace:
+[28-Sep-2015 23:47:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php:0
+[28-Sep-2015 23:47:55 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php:12
+[28-Sep-2015 23:48:42 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php on line 12
+[28-Sep-2015 23:48:42 UTC] PHP Stack trace:
+[28-Sep-2015 23:48:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php:0
+[28-Sep-2015 23:48:42 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_4/removeemail.php:12
+[28-Sep-2015 23:48:59 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php on line 44
+[28-Sep-2015 23:48:59 UTC] PHP Stack trace:
+[28-Sep-2015 23:48:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php:0
+[28-Sep-2015 23:48:59 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php:44
+[28-Sep-2015 23:49:41 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php on line 44
+[28-Sep-2015 23:49:41 UTC] PHP Stack trace:
+[28-Sep-2015 23:49:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php:0
+[28-Sep-2015 23:49:41 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_4/sendemail.php:44
+[04-Oct-2015 21:59:27 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/ubuntu/workspace/php_course_work/project_1/madlibdisplay.php on line 31
+[04-Oct-2015 22:11:10 UTC] PHP Parse error:  syntax error, unexpected '$verb' (T_VARIABLE), expecting ',' or ';' in /home/ubuntu/workspace/php_course_work/project_1/madlibdisplay.php on line 31
+[04-Oct-2015 22:11:45 UTC] PHP Parse error:  syntax error, unexpected '$adverb' (T_VARIABLE), expecting ',' or ';' in /home/ubuntu/workspace/php_course_work/project_1/madlibdisplay.php on line 31
+[04-Oct-2015 22:12:14 UTC] PHP Parse error:  syntax error, unexpected 'mysqli_close' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/php_course_work/project_1/madlibdisplay.php on line 33
+[05-Oct-2015 01:36:35 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/php_course_work/lab_5/index.php on line 31
+[05-Oct-2015 01:37:51 UTC] PHP Parse error:  syntax error, unexpected '');' (T_CONSTANT_ENCAPSED_STRING) in /home/ubuntu/workspace/php_course_work/lab_5/addscore.php on line 24
+[06-Oct-2015 00:04:59 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/php_course_work/lab_5/index.php on line 32
+[06-Oct-2015 00:05:56 UTC] PHP Warning:  mysqli_connect(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/ubuntu/workspace/php_course_work/lab_5/index.php on line 20
+[06-Oct-2015 00:05:56 UTC] PHP Stack trace:
+[06-Oct-2015 00:05:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_5/index.php:0
+[06-Oct-2015 00:05:56 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_5/index.php:20
+[06-Oct-2015 00:05:56 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/ubuntu/workspace/php_course_work/lab_5/index.php on line 20
+[06-Oct-2015 00:05:56 UTC] PHP Stack trace:
+[06-Oct-2015 00:05:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_5/index.php:0
+[06-Oct-2015 00:05:56 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_5/index.php:20
+[06-Oct-2015 00:05:56 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ubuntu/workspace/php_course_work/lab_5/index.php on line 24
+[06-Oct-2015 00:05:56 UTC] PHP Stack trace:
+[06-Oct-2015 00:05:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_5/index.php:0
+[06-Oct-2015 00:05:56 UTC] PHP   2. mysqli_query() /home/ubuntu/workspace/php_course_work/lab_5/index.php:24
+[06-Oct-2015 00:05:56 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/php_course_work/lab_5/index.php on line 29
+[06-Oct-2015 00:05:56 UTC] PHP Stack trace:
+[06-Oct-2015 00:05:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_5/index.php:0
+[06-Oct-2015 00:05:56 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/php_course_work/lab_5/index.php:29
+[06-Oct-2015 00:05:56 UTC] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, boolean given in /home/ubuntu/workspace/php_course_work/lab_5/index.php on line 50
+[06-Oct-2015 00:05:56 UTC] PHP Stack trace:
+[06-Oct-2015 00:05:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_5/index.php:0
+[06-Oct-2015 00:05:56 UTC] PHP   2. mysqli_close() /home/ubuntu/workspace/php_course_work/lab_5/index.php:50
+[06-Oct-2015 00:14:13 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/php_course_work/lab_5/addscore.php on line 79
+[12-Oct-2015 02:45:01 UTC] PHP Parse error:  syntax error, unexpected 'approved' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/php_course_work/lab_6/admin.php on line 41
+[12-Oct-2015 23:48:13 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/ubuntu/workspace/php_course_work/lab_6/addscore.php on line 18
+[12-Oct-2015 23:48:13 UTC] PHP Stack trace:
+[12-Oct-2015 23:48:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:0
+[12-Oct-2015 23:48:13 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:18
+[12-Oct-2015 23:48:13 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/ubuntu/workspace/php_course_work/lab_6/addscore.php on line 19
+[12-Oct-2015 23:48:13 UTC] PHP Stack trace:
+[12-Oct-2015 23:48:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:0
+[12-Oct-2015 23:48:13 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:19
+[12-Oct-2015 23:48:13 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/ubuntu/workspace/php_course_work/lab_6/addscore.php on line 20
+[12-Oct-2015 23:48:13 UTC] PHP Stack trace:
+[12-Oct-2015 23:48:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:0
+[12-Oct-2015 23:48:13 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:20
+[12-Oct-2015 23:48:52 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/ubuntu/workspace/php_course_work/lab_6/addscore.php on line 18
+[12-Oct-2015 23:48:52 UTC] PHP Stack trace:
+[12-Oct-2015 23:48:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:0
+[12-Oct-2015 23:48:52 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:18
+[12-Oct-2015 23:48:52 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/ubuntu/workspace/php_course_work/lab_6/addscore.php on line 19
+[12-Oct-2015 23:48:52 UTC] PHP Stack trace:
+[12-Oct-2015 23:48:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:0
+[12-Oct-2015 23:48:52 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:19
+[12-Oct-2015 23:48:52 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/ubuntu/workspace/php_course_work/lab_6/addscore.php on line 20
+[12-Oct-2015 23:48:52 UTC] PHP Stack trace:
+[12-Oct-2015 23:48:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:0
+[12-Oct-2015 23:48:52 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:20
+[19-Oct-2015 23:51:03 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/ubuntu/workspace/php_course_work/lab_7/editprofile.php on line 52
+[19-Oct-2015 23:51:03 UTC] PHP Stack trace:
+[19-Oct-2015 23:51:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_7/editprofile.php:0
+[19-Oct-2015 23:51:03 UTC] PHP   2. getimagesize() /home/ubuntu/workspace/php_course_work/lab_7/editprofile.php:52
+[26-Oct-2015 02:20:25 UTC] PHP Warning:  mysqli_query(): Empty query in /home/ubuntu/workspace/php_course_work/lab_8/search.php on line 48
+[26-Oct-2015 02:20:25 UTC] PHP Stack trace:
+[26-Oct-2015 02:20:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_8/search.php:0
+[26-Oct-2015 02:20:25 UTC] PHP   2. mysqli_query() /home/ubuntu/workspace/php_course_work/lab_8/search.php:48
+[26-Oct-2015 02:20:25 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/php_course_work/lab_8/search.php on line 49
+[26-Oct-2015 02:20:25 UTC] PHP Stack trace:
+[26-Oct-2015 02:20:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_8/search.php:0
+[26-Oct-2015 02:20:25 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/php_course_work/lab_8/search.php:49
